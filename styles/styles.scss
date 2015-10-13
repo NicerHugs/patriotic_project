@@ -1,3 +1,5 @@
+@import 'variables';
+
 * {
   box-sizing: border-box;
 }
@@ -13,26 +15,67 @@ header {
   }
 }
 section {
-  background-color: #CACDAA;
+  background-color: $white;
   display: block;
   width: 33%;
   height: 245px;
-  border: 3px solid #1B2E43;
+  border: 3px solid $blue;
   border-radius: 20px;
   float: left;
   margin-left: 2px;
   padding: 0;
   margin: 0;
-
-
 }
 
 .usa:hover + .stars div  {
-  background-color: #1B2E43;
-  color: #CACDAA;
+  // background-color: $blue;
+  color: $white;
+  text-shadow: #CCC 1px 0 10px;
+  -webkit-animation: twinkle .2s linear 0s infinite alternate;
+     -moz-animation: twinkle .2s linear 0s infinite alternate;
+       -o-animation: twinkle .2s linear 0s infinite alternate;
+          animation: twinkle .2s linear 0s infinite alternate;
 }
+
+@-webkit-keyframes twinkle {
+  from {
+    text-shadow: 0 0 1px white;
+    color: white;
+  } to {
+    text-shadow: 0 0  10px white;
+    color: $white;
+  }
+}
+@-moz-keyframes twinkle {
+  from {
+    text-shadow: 0 0 1px white;
+    color: white;
+  } to {
+    text-shadow: 0 0  10px white;
+    color: $white;
+  }
+}
+@-o-keyframes twinkle {
+  from {
+    text-shadow: 0 0 1px white;
+    color: white;
+  } to {
+    text-shadow: 0 0  10px white;
+    color: $white;
+  }
+}
+@keyframes twinkle {
+  from {
+    text-shadow: 0 0 1px white;
+    color: white;
+  } to {
+    text-shadow: 0 0  10px white;
+    color: $white;
+  }
+}
+
 .usa:hover ~ .stripes {
-  background: #CACDAA;
+  background: $white;
 
 }
 .usa {
@@ -41,7 +84,7 @@ section {
 
 div {
   width: 30%;
-  border: 2px solid #1B2E43;
+  border: 2px solid $blue;
   border-radius: 40px;
   height: 40px;
   float: left;
@@ -49,26 +92,26 @@ div {
   margin: 4px;
   text-align: center;
   padding-top: 8px;
-  background: #A82B1A;
+  background: $red;
   font-size: 22px;
   font-weight: lighter;
-  color:  #1B2E43;
+  color:  $blue;
 
 }
 .stars{
   padding-left: 20px;
 }
 .stars div {
-  background: #1B2E43;
+  background: $blue;
   width: 16%;
   font-size: 10px;
   padding-left: 3px;
   padding-top: 8px;
-  color: #1B2E43;
+  color: $blue;
 }
 
 .stripes {
-  background: #A82B1A;
+  background: $red;
   padding: 10px 10px 6px 6px;
 }
 
@@ -76,6 +119,6 @@ div {
   width: 95%;
   height: 20px;
   margin-bottom: 8px;
-  background: #A82B1A;
+  background: $red;
   border: none;
 }

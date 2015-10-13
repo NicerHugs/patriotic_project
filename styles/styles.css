@@ -23,8 +23,44 @@ section {
   margin: 0; }
 
 .usa:hover + .stars div {
-  background-color: #1B2E43;
-  color: #CACDAA; }
+  color: #CACDAA;
+  text-shadow: #CCC 1px 0 10px;
+  -webkit-animation: twinkle 0.2s linear 0s infinite alternate;
+  -moz-animation: twinkle 0.2s linear 0s infinite alternate;
+  -o-animation: twinkle 0.2s linear 0s infinite alternate;
+  animation: twinkle 0.2s linear 0s infinite alternate; }
+
+@-webkit-keyframes twinkle {
+  from {
+    text-shadow: 0 0 1px white;
+    color: white; }
+  to {
+    text-shadow: 0 0 10px white;
+    color: #CACDAA; } }
+
+@-moz-keyframes twinkle {
+  from {
+    text-shadow: 0 0 1px white;
+    color: white; }
+  to {
+    text-shadow: 0 0 10px white;
+    color: #CACDAA; } }
+
+@-o-keyframes twinkle {
+  from {
+    text-shadow: 0 0 1px white;
+    color: white; }
+  to {
+    text-shadow: 0 0 10px white;
+    color: #CACDAA; } }
+
+@keyframes twinkle {
+  from {
+    text-shadow: 0 0 1px white;
+    color: white; }
+  to {
+    text-shadow: 0 0 10px white;
+    color: #CACDAA; } }
 
 .usa:hover ~ .stripes {
   background: #CACDAA; }
